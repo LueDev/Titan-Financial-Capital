@@ -75,6 +75,9 @@ const MonthlyFinancialChart = ({ transactions }) => {
                 display: true,
                 text: 'Transaction Amount',
               },
+              ticks: {
+                callback: (value) => `$${value}`,
+              },
             },
           },
         },
@@ -142,7 +145,7 @@ const MonthlyFinancialChart = ({ transactions }) => {
         dateFormat="MM/yyyy"
         showMonthYearPicker
       />
-      <canvas id="monthlyFinancialChart" width="1000" height="400"/>
+      <canvas id="monthlyFinancialChart" width="1100" height="400"/>
     </div>
   );
 };

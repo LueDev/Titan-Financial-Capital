@@ -10,9 +10,11 @@ function TransactionCard({ transaction }) {
         <div className="transaction-name">
           <h3>{transaction.name}</h3>
         </div>
-        <div className="transaction-amount">
+        <div className={transaction.amount > 0 
+        ? "transaction-amount-positive"
+        : "transaction-amount-negative"}>
             {transaction.amount > 0 
-            ? `$${transaction.amount}`
+            ? `$${Number(transaction.amount)}`
             : `-$${Math.abs(transaction.amount)}`}
         </div>
         <div className="transaction-date">

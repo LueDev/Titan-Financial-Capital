@@ -90,7 +90,7 @@ const DailyTransactionChart = ({ transactions }) => {
   const aggregateData = (data) => {
     // Sort transactions by timestamp before processing
     // This solved a bug where the correct sum of transactions was inaccurate 
-    // because timestamps for non-consecutive transactions threw off the reduce
+    // because timestamps for non-consecutive transactions threw off the calc
     const sortedTransactions = data.slice().sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
   
     const aggregatedByDay = sortedTransactions.reduce(

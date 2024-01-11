@@ -1,6 +1,7 @@
 * {
   margin: 0;
   /* overflow:hidden; */
+  
 }
 
 .financialChart {
@@ -67,51 +68,6 @@
   transition: font-size 0.3s;
 }
 
-@media only screen and (max-width: 1081px) {
-  .Login_h1 h1 {
-    margin: 0;
-    font-size: 88px;
-    background: linear-gradient(
-      94deg,
-      #b6b6b6,
-      #fcfcfc,
-      #666666,
-      #6e6b69,
-      #e1ddd9,
-      #a08264,
-      #7b7571,
-      #4e3115,
-      #7d4711
-    );
-    background-size: 400% 400%;
-    animation: moveGradient 5s ease infinite;
-    color: transparent; /* Set text color to transparent */
-    background-clip: text; /* Apply the background gradient to the text content */
-  }
-}
-
-@media only screen and (max-width: 880px) {
-  .Login_h1 h1 {
-    margin: 0;
-    font-size: 68px;
-    background: linear-gradient(
-      94deg,
-      #b6b6b6,
-      #fcfcfc,
-      #666666,
-      #6e6b69,
-      #e1ddd9,
-      #a08264,
-      #7b7571,
-      #4e3115,
-      #7d4711
-    );
-    background-size: 400% 400%;
-    animation: moveGradient 5s ease infinite;
-    color: transparent; /* Set text color to transparent */
-    background-clip: text; /* Apply the background gradient to the text content */
-  }
-}
 
 @keyframes moveGradient {
   0% {
@@ -290,7 +246,7 @@
   color: rgb(22, 93, 122);
 }
 
-.NavBar__Nav-Link:active {
+.NavBar__Nav-Link .active {
   color: gold;
 }
 
@@ -361,6 +317,22 @@
 .bank-account-card_balance-number {
   font-size: 72px;
   font-weight: 1500;
+  background: linear-gradient(
+    94deg,
+    #b6b6b6,
+    #fcfcfc,
+    #9d9696,
+    #6e6b69,
+    #e1ddd9,
+    #a08264,
+    #7b7571,
+    #4e3115,
+    #7d4711
+  );
+  background-size: 400% 400%;
+  animation: moveGradient 5s ease infinite;
+  color: transparent; /* Set text color to transparent */
+  background-clip: text; /* Apply the background gradient to the text content */
 }
 
 .bank-account-card_balance-number_negative {
@@ -377,7 +349,6 @@
   overflow-y: hidden;
   overflow: scroll;
   border-radius: 25px;
-  scroll-behavior: auto;
 }
 
 .transaction-ul-list {
@@ -388,10 +359,20 @@
   margin-top: 15px;
 }
 
+.transaction-amount-positive {
+  color: green;
+  font-size: 18px;
+}
+
+.transaction-amount-negative {
+  color: red;
+  font-size: 18px;
+}
+
 .transaction-charts {
   overflow: auto;
-  color:black;
-  flex:0.6;
+  color: black;
+  flex: 0.6;
   /* margin-top: 2.5px; */
 }
 .transaction-list {
@@ -413,7 +394,7 @@
   overflow: scroll;
   /* border: 2px solid blue; */
   list-style: none;
-  width: 400px;
+  width: 100%
 }
 
 .transaction-card {
@@ -426,12 +407,66 @@
   transition: width 0.1s;
 }
 .transaction-card:hover {
-  list-style: none;
-  margin: 13px 0px;
-  max-height: 250px;
-  /* border: 2px solid black; */
-  padding: 14px 24px;
   width: 86%;
   background-color: rgb(192, 192, 192);
 }
 
+@media only screen and (max-width: 1230px) {
+  .transaction-ul {
+    flex-direction: column;
+  }
+
+  .transaction-ul-list {
+    margin: 0;
+  }
+
+  .transaction-list li{
+    width: 100%;
+    margin: 14px 0px;
+}
+  .transaction-card {
+    width: 70%;
+    /* max-height: 3%; */
+    margin: 0;
+  }
+
+  .transaction-card:hover {
+    width: 82%;
+  }
+
+  #yearlyFinancialChart #monthlyFinancialChart {
+    width: 1100;
+  }
+
+  #financialChart {
+    width: 1200;
+  }
+}
+
+@media only screen and (max-width: 1081px) {
+  .Login_h1 h1 {
+  font-size: 88px;}
+}
+
+@media only screen and (max-width: 880px) {
+  .Login_h1 h1 {
+    font-size: 9vw ;
+  }
+  
+} 
+/* 
+@media only screen and (max-width: 681px) {
+  .Login_h1 h1 {
+    font-size: 365%;
+    margin: 0 auto;
+    align-self:center;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .Login_h1 h1 {
+    font-size: 265%;
+    margin: 0 auto;
+    align-self:center;
+  }
+} */
