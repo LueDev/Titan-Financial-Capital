@@ -1,37 +1,49 @@
-import './App.css';
+import "./App.css";
 
-import { useState, useEffect} from "react";
-import { Outlet, Navigate, useNavigate} from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Outlet, Navigate, useNavigate } from "react-router-dom";
 import NavBar from "./components/NavBar";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
   const navigate = useNavigate();
+  const [bankAccount, setBankAccount] = useState({
+    id: "",
+    owner: "",
+    starting_balance: 0,
+    balance: 0,
+    transactions: [],
+  });
+
+  useEffect(() => {
+    fetch("http://localhost:4000/bank_account")
+      .then((res) => res.json())
+      .then((data) => setBankAccount(data));
+  }, []);
 
 
-   const login = () =>{
+  const login = () => {
     setIsLoggedIn(true);
   };
 
-  const logout = () =>{
+  const logout = () => {
     setIsLoggedIn(false);
   };
 
-  useEffect(() =>{
+  useEffect(() => {
     if (isLoggedIn) {
       navigate("/");
     } else {
       navigate("/login");
     }
-  }, [isLoggedIn]);
+  }, [navigate, isLoggedIn]);
 
   return (
     <div className="app">
-{/* Add conditional rendering so users have to be logged in to see pages on the site */}
-      {isLoggedIn ? <NavBar logout={logout}  /> : <Navigate to="/login" />}
-      <Outlet context={login} />
+      {isLoggedIn ? <NavBar logout={logout} /> : <Navigate to="/login" />}
+      <Outlet context={{login: login, bankAccount: bankAccount, setBankAccount: setBankAccount}} />
     </div>
   );
-};
+}
 
 export default App;

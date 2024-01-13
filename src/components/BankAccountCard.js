@@ -31,7 +31,7 @@ const BankAccountCard = ({ bankAccount }) => {
           >
             {bankAccount.balance > 0
               ? `$${bankAccount.balance}`
-              : `- $${Math.abs(bankAccount.balance)}`}
+              : `-$${Math.abs(bankAccount.balance)}`}
           </p>
         </div>
       </div>
@@ -50,8 +50,8 @@ const BankAccountCard = ({ bankAccount }) => {
             <ul className="transaction-ul">
               <div class="transaction-ul-list">
                 {sortTransactions.map((transaction) => (
-                  
-                  <TransactionCard transaction={transaction} />
+
+                  <TransactionCard key={transaction.id} transaction={transaction} />
                 ))}
               </div>
               <div class="transaction-charts">

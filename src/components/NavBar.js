@@ -1,13 +1,13 @@
 import React from "react";
-import { AppBar, Toolbar, Typography } from "@mui/material";
-import logo from "../images/Logo-dark-background.png";
+import { Toolbar} from "@mui/material";
+import logo from "../images/TC_no_background.png";
 import "../index.css";
 import { NavLink } from "react-router-dom";
 
 const Navbar = ({ logout }) => {
   return (
     <nav>
-      <AppBar position="static" style={{ backgroundColor: "#100e0c" }}>
+      <div position="static" className="NavBar">
         <Toolbar>
           <NavLink to="/" className="nav-link">
             {" "}
@@ -32,7 +32,7 @@ const Navbar = ({ logout }) => {
             <h2 onClick={() => logout()}> Logout </h2>
           </div>
         </Toolbar>
-      </AppBar>
+      </div>
     </nav>
   );
 };

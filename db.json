@@ -1,401 +1,457 @@
 {
+  "authentication": [
+    {
+      "id": 1,
+      "username": "Luis",
+      "password": "js"
+    }
+  ],
   "bank_account": {
     "id": 1,
     "owner": "Luis",
     "account_Type": "Checking",
-    "balance": 2648.0,
+    "balance": 3048,
     "transactions": [
       {
         "id": 1,
         "name": "Starting_Balance",
-        "timestamp": "2024-01-01T12:30:00Z",
+        "timestamp": "2023-10-01T12:30:00Z",
         "amount": 1000,
-        "updated_balance": 1000.0
+        "updated_balance": 1000
       },
       {
         "id": 2,
         "name": "Work",
-        "timestamp": "2024-01-01T18:30:00Z",
+        "timestamp": "2023-10-01T18:30:00Z",
         "amount": 500,
-        "updated_balance": 1500.0
+        "updated_balance": 1500
       },
       {
         "id": 3,
         "name": "Bill",
-        "timestamp": "2024-01-02T12:15:00Z",
+        "timestamp": "2023-10-02T12:15:00Z",
         "amount": -200,
-        "updated_balance": 1300.0
+        "updated_balance": 1300
       },
       {
         "id": 4,
         "name": "Work",
-        "timestamp": "2024-01-03T09:45:00Z",
+        "timestamp": "2023-10-03T09:45:00Z",
         "amount": 100,
-        "updated_balance": 1400.0
+        "updated_balance": 1400
       },
       {
         "id": 5,
         "name": "Groceries",
-        "timestamp": "2024-01-04T15:30:00Z",
+        "timestamp": "2023-10-04T15:30:00Z",
         "amount": -150,
-        "updated_balance": 1250.0
+        "updated_balance": 1250
       },
       {
         "id": 6,
         "name": "Work",
-        "timestamp": "2024-01-05T11:00:00Z",
+        "timestamp": "2023-10-05T11:00:00Z",
         "amount": 300,
-        "updated_balance": 1550.0
+        "updated_balance": 1550
       },
       {
         "id": 7,
         "name": "Bill",
-        "timestamp": "2024-01-06T14:45:00Z",
+        "timestamp": "2023-10-06T14:45:00Z",
         "amount": -50,
-        "updated_balance": 1500.0
+        "updated_balance": 1500
       },
       {
         "id": 8,
         "name": "Work",
-        "timestamp": "2024-01-07T10:20:00Z",
+        "timestamp": "2023-10-07T10:20:00Z",
         "amount": 200,
-        "updated_balance": 1700.0
+        "updated_balance": 1700
       },
       {
         "id": 9,
         "name": "Bill",
-        "timestamp": "2024-01-08T13:05:00Z",
+        "timestamp": "2023-10-08T13:05:00Z",
         "amount": -100,
-        "updated_balance": 1600.0
+        "updated_balance": 1600
       },
       {
         "id": 10,
         "name": "Work",
-        "timestamp": "2024-01-09T16:40:00Z",
+        "timestamp": "2023-10-09T16:40:00Z",
         "amount": 150,
-        "updated_balance": 1750.0
+        "updated_balance": 1750
       },
       {
         "id": 11,
         "name": "Bill",
-        "timestamp": "2024-01-10T09:15:00Z",
+        "timestamp": "2023-10-10T09:15:00Z",
         "amount": -120,
-        "updated_balance": 1630.0
+        "updated_balance": 1630
       },
       {
         "id": 12,
         "name": "Venmo",
-        "timestamp": "2024-01-11T14:00:00Z",
+        "timestamp": "2023-10-11T14:00:00Z",
         "amount": 80,
-        "updated_balance": 1710.0
+        "updated_balance": 1710
       },
       {
         "id": 13,
         "name": "Miscellaneous",
-        "timestamp": "2024-01-12T11:30:00Z",
+        "timestamp": "2023-10-12T11:30:00Z",
         "amount": -180,
-        "updated_balance": 1530.0
+        "updated_balance": 1530
       },
       {
         "id": 14,
         "name": "Work",
-        "timestamp": "2024-01-13T10:05:00Z",
+        "timestamp": "2023-10-13T10:05:00Z",
         "amount": 90,
-        "updated_balance": 1620.0
+        "updated_balance": 1620
       },
       {
         "id": 15,
         "name": "Miscellaneous",
-        "timestamp": "2024-01-14T13:50:00Z",
+        "timestamp": "2023-10-14T13:50:00Z",
         "amount": -70,
-        "updated_balance": 1550.0
+        "updated_balance": 1550
       },
       {
         "id": 16,
         "name": "Work",
-        "timestamp": "2024-01-15T15:25:00Z",
+        "timestamp": "2023-10-15T15:25:00Z",
         "amount": 120,
-        "updated_balance": 1670.0
+        "updated_balance": 1670
       },
       {
         "id": 17,
         "name": "Work",
-        "timestamp": "2024-01-16T08:30:00Z",
+        "timestamp": "2023-10-16T08:30:00Z",
         "amount": 500,
-        "updated_balance": 2170.0
+        "updated_balance": 2170
       },
       {
         "id": 18,
         "name": "Bill",
-        "timestamp": "2024-01-17T12:15:00Z",
+        "timestamp": "2023-10-17T12:15:00Z",
         "amount": -200,
-        "updated_balance": 1970.0
+        "updated_balance": 1970
       },
       {
         "id": 19,
         "name": "Work",
-        "timestamp": "2024-01-18T09:45:00Z",
+        "timestamp": "2023-10-18T09:45:00Z",
         "amount": 100,
-        "updated_balance": 2070.0
+        "updated_balance": 2070
       },
       {
         "id": 20,
         "name": "Groceries",
-        "timestamp": "2024-01-19T15:30:00Z",
+        "timestamp": "2023-10-19T15:30:00Z",
         "amount": -150,
-        "updated_balance": 1920.0
+        "updated_balance": 1920
       },
       {
         "id": 21,
         "name": "Work",
-        "timestamp": "2024-01-20T11:00:00Z",
+        "timestamp": "2023-10-20T11:00:00Z",
         "amount": 300,
-        "updated_balance": 2220.0
+        "updated_balance": 2220
       },
       {
         "id": 22,
         "name": "Miscellaneous",
-        "timestamp": "2024-01-21T14:45:00Z",
+        "timestamp": "2023-10-21T14:45:00Z",
         "amount": -50,
-        "updated_balance": 2170.0
+        "updated_balance": 2170
       },
       {
         "id": 23,
         "name": "Work",
-        "timestamp": "2024-01-22T10:20:00Z",
+        "timestamp": "2023-10-22T10:20:00Z",
         "amount": 200,
-        "updated_balance": 2370.0
+        "updated_balance": 2370
       },
       {
         "id": 24,
         "name": "Miscellaneous",
-        "timestamp": "2024-01-23T13:05:00Z",
+        "timestamp": "2023-10-23T13:05:00Z",
         "amount": -100,
-        "updated_balance": 2270.0
+        "updated_balance": 2270
       },
       {
         "id": 25,
         "name": "Work",
-        "timestamp": "2024-01-24T16:40:00Z",
+        "timestamp": "2023-10-24T16:40:00Z",
         "amount": 150,
-        "updated_balance": 2420.0
+        "updated_balance": 2420
       },
       {
         "id": 26,
         "name": "Bill",
-        "timestamp": "2024-01-25T09:15:00Z",
+        "timestamp": "2023-10-25T09:15:00Z",
         "amount": -120,
-        "updated_balance": 2300.0
+        "updated_balance": 2300
       },
       {
         "id": 27,
         "name": "Work",
-        "timestamp": "2024-01-26T14:00:00Z",
+        "timestamp": "2023-10-26T14:00:00Z",
         "amount": 80,
-        "updated_balance": 2380.0
+        "updated_balance": 2380
       },
       {
         "id": 28,
         "name": "Bill",
-        "timestamp": "2024-01-27T11:30:00Z",
+        "timestamp": "2023-10-27T11:30:00Z",
         "amount": -180,
-        "updated_balance": 2200.0
+        "updated_balance": 2200
       },
       {
         "id": 29,
         "name": "Venmo",
-        "timestamp": "2024-01-28T10:05:00Z",
+        "timestamp": "2023-10-28T10:05:00Z",
         "amount": 90,
-        "updated_balance": 2290.0
+        "updated_balance": 2290
       },
       {
         "id": 30,
         "name": "Miscellaneous",
-        "timestamp": "2024-01-29T13:50:00Z",
+        "timestamp": "2023-10-29T13:50:00Z",
         "amount": -70,
-        "updated_balance": 2220.0
+        "updated_balance": 2220
       },
       {
         "id": 31,
         "name": "Work",
-        "timestamp": "2024-01-30T15:25:00Z",
+        "timestamp": "2023-10-30T15:25:00Z",
         "amount": 120,
-        "updated_balance": 2340.0
+        "updated_balance": 2340
       },
       {
         "id": 32,
         "name": "Miscellaneous",
-        "timestamp": "2024-01-31T13:50:00Z",
+        "timestamp": "2023-10-31T13:50:00Z",
         "amount": -70,
-        "updated_balance": 2270.0
+        "updated_balance": 2270
       },
       {
         "id": 33,
         "name": "Bill",
-        "timestamp": "2024-02-01T13:50:00Z",
+        "timestamp": "2023-11-01T13:50:00Z",
         "amount": -70,
-        "updated_balance": 2200.0
+        "updated_balance": 2200
       },
       {
         "id": 34,
         "name": "Work",
-        "timestamp": "2024-02-02T13:50:00Z",
+        "timestamp": "2023-11-02T13:50:00Z",
         "amount": 705,
-        "updated_balance": 2905.0
+        "updated_balance": 2905
       },
       {
         "id": 35,
         "name": "Miscellaneous",
-        "timestamp": "2024-02-03T13:50:00Z",
+        "timestamp": "2023-11-03T13:50:00Z",
         "amount": -432,
-        "updated_balance": 2473.0
+        "updated_balance": 2473
       },
       {
         "id": 36,
         "name": "Venmo",
-        "timestamp": "2024-02-04T13:50:00Z",
+        "timestamp": "2023-11-04T13:50:00Z",
         "amount": 25,
-        "updated_balance": 2498.0
+        "updated_balance": 2498
       },
       {
         "id": 37,
         "name": "Venmo",
-        "timestamp": "2024-02-01T10:15:00Z",
+        "timestamp": "2023-11-01T10:15:00Z",
         "amount": 20,
-        "updated_balance": 2518.0
+        "updated_balance": 2518
       },
       {
         "id": 38,
         "name": "Venmo",
-        "timestamp": "2024-02-02T14:20:00Z",
+        "timestamp": "2023-11-02T14:20:00Z",
         "amount": 15,
-        "updated_balance": 2533.0
+        "updated_balance": 2533
       },
       {
         "id": 39,
         "name": "Miscellaneous",
-        "timestamp": "2024-02-03T12:45:00Z",
+        "timestamp": "2023-12-03T12:45:00Z",
         "amount": -10,
-        "updated_balance": 2523.0
+        "updated_balance": 2523
       },
       {
         "id": 40,
         "name": "Venmo",
-        "timestamp": "2024-02-07T09:30:00Z",
+        "timestamp": "2023-12-07T09:30:00Z",
         "amount": 25,
-        "updated_balance": 2548.0
+        "updated_balance": 2548
       },
       {
         "id": 41,
         "name": "Miscellaneous",
-        "timestamp": "2024-02-10T18:00:00Z",
+        "timestamp": "2023-12-10T18:00:00Z",
         "amount": -15,
-        "updated_balance": 2533.0
+        "updated_balance": 2533
       },
       {
         "id": 42,
         "name": "Work",
-        "timestamp": "2024-02-15T08:30:00Z",
+        "timestamp": "2023-12-15T08:30:00Z",
         "amount": 50,
-        "updated_balance": 2583.0
+        "updated_balance": 2583
       },
       {
         "id": 43,
         "name": "Miscellaneous",
-        "timestamp": "2024-02-20T11:45:00Z",
+        "timestamp": "2023-12-20T11:45:00Z",
         "amount": -5,
-        "updated_balance": 2578.0
+        "updated_balance": 2578
       },
       {
         "id": 44,
         "name": "Venmo",
-        "timestamp": "2024-02-22T16:10:00Z",
+        "timestamp": "2023-12-22T16:10:00Z",
         "amount": 10,
-        "updated_balance": 2588.0
+        "updated_balance": 2588
       },
       {
         "id": 45,
         "name": "Groceries",
-        "timestamp": "2024-02-25T14:30:00Z",
+        "timestamp": "2023-12-25T14:30:00Z",
         "amount": -20,
-        "updated_balance": 2568.0
+        "updated_balance": 2568
       },
       {
         "id": 46,
         "name": "Work",
-        "timestamp": "2024-02-28T17:20:00Z",
+        "timestamp": "2023-12-28T17:20:00Z",
         "amount": 30,
-        "updated_balance": 2598.0
+        "updated_balance": 2598
       },
       {
         "id": 47,
         "name": "Work",
-        "timestamp": "2024-03-02T09:15:00Z",
+        "timestamp": "2024-01-02T09:15:00Z",
         "amount": 40,
-        "updated_balance": 2638.0
+        "updated_balance": 2638
       },
       {
         "id": 48,
         "name": "Miscellaneous",
-        "timestamp": "2024-03-05T13:20:00Z",
+        "timestamp": "2024-01-05T13:20:00Z",
         "amount": -25,
-        "updated_balance": 2613.0
+        "updated_balance": 2613
       },
       {
         "id": 49,
         "name": "Venmo",
-        "timestamp": "2024-03-08T15:45:00Z",
+        "timestamp": "2024-01-08T15:45:00Z",
         "amount": 20,
-        "updated_balance": 2633.0
+        "updated_balance": 2633
       },
       {
         "id": 50,
         "name": "Miscellaneous",
-        "timestamp": "2024-03-12T11:30:00Z",
+        "timestamp": "2024-01-09T11:30:00Z",
         "amount": -30,
-        "updated_balance": 2603.0
+        "updated_balance": 2603
       },
       {
         "id": 51,
         "name": "Work",
-        "timestamp": "2024-03-16T18:00:00Z",
+        "timestamp": "2024-01-09T18:00:00Z",
         "amount": 35,
-        "updated_balance": 2638.0
+        "updated_balance": 2638
       },
       {
         "id": 52,
         "name": "Miscellaneous",
-        "timestamp": "2024-03-19T08:30:00Z",
+        "timestamp": "2024-01-09T08:30:00Z",
         "amount": -15,
-        "updated_balance": 2623.0
+        "updated_balance": 2623
       },
       {
         "id": 53,
         "name": "Venmo",
-        "timestamp": "2024-03-23T11:45:00Z",
+        "timestamp": "2024-01-10T11:45:00Z",
         "amount": 25,
-        "updated_balance": 2648.0
+        "updated_balance": 2648
       },
       {
         "id": 54,
         "name": "Miscellaneous",
-        "timestamp": "2024-03-26T16:10:00Z",
+        "timestamp": "2024-01-10T16:10:00Z",
         "amount": -10,
-        "updated_balance": 2638.0
+        "updated_balance": 2638
       },
       {
         "id": 55,
         "name": "Venmo",
-        "timestamp": "2024-03-29T14:30:00Z",
+        "timestamp": "2024-01-10T14:30:00Z",
         "amount": 15,
-        "updated_balance": 2653.0
+        "updated_balance": 2653
       },
       {
         "id": 56,
         "name": "Miscellaneous",
-        "timestamp": "2024-03-31T17:20:00Z",
+        "timestamp": "2024-01-10T17:20:00Z",
         "amount": -5,
-        "updated_balance": 2648.0
+        "updated_balance": 2648
+      },
+      {
+        "id": 57,
+        "name": "Deposit",
+        "timestamp": "2024-01-13T21:22:57.687Z",
+        "amount": 500,
+        "updated_balance": 3148
+      },
+      {
+        "id": 58,
+        "name": "Deposit",
+        "timestamp": "2024-01-13T22:02:10.649Z",
+        "amount": 60,
+        "updated_balance": 3208
+      },
+      {
+        "id": 59,
+        "name": "Deposit",
+        "timestamp": "2024-01-13T22:02:24.129Z",
+        "amount": 50,
+        "updated_balance": 3258
+      },
+      {
+        "id": 60,
+        "name": "Deposit",
+        "timestamp": "2024-01-13T22:02:45.875Z",
+        "amount": 44,
+        "updated_balance": 3302
+      },
+      {
+        "id": 61,
+        "name": "Withdrawal",
+        "timestamp": "2024-01-13T22:11:10.260Z",
+        "amount": 44,
+        "updated_balance": 3258
+      },
+      {
+        "id": 62,
+        "name": "Withdrawal",
+        "timestamp": "2024-01-13T22:12:10.774Z",
+        "amount": -10,
+        "updated_balance": 3248
+      },
+      {
+        "id": 63,
+        "name": "Withdrawal",
+        "timestamp": "2024-01-13T22:12:35.707Z",
+        "amount": -200,
+        "updated_balance": 3048
       }
     ]
   }

@@ -10,6 +10,7 @@ function Login() {
     username: "",
     password: "",
   });
+  const [showValidation, setShowValidation] = useState(false);
 
   function handleChange(e) {
     setFormData({
@@ -21,7 +22,27 @@ function Login() {
   // Create a function that calls the login function when the form is submitted
   function handleLogin(e) {
     e.preventDefault();
-    login();
+    fetch(`http://localhost:4000/Authentication`)
+      .then((res) => res.json())
+      .then((data) => {
+        let AccountFound = data.filter(
+          (user) =>
+            user.username === formData.username &&
+            user.password === formData.password
+        );
+        
+        try {
+          AccountFound[0]["id"] !== null
+            ? login.login()
+            : console.log("Invalid credentials");
+        } catch (error) {
+          console.warn("Invalid credentials");
+          setShowValidation(true);
+          setTimeout(() => {
+            setShowValidation(false);
+          }, 2000);
+        }
+      });
   }
 
   return (
@@ -31,6 +52,12 @@ function Login() {
       </div>
       <div className="Login_h1">
         <h1>Titan Capital Financial</h1>
+      </div>
+      <div
+        id="validation"
+        style={{ display: showValidation ? "block" : "none" }}
+      >
+        <p>Invalid Credentials</p>
       </div>
       <div className="Login__form">
         <form onSubmit={handleLogin}>
@@ -55,7 +82,13 @@ function Login() {
             />
           </div>
           <div className="login__form-submit">
-          <button className="login__form-submit-button"type="submit">Login</button>
+            <button
+              className="login__form-submit-button"
+              type="submit"
+              onClick={handleLogin}
+            >
+              Login
+            </button>
           </div>
         </form>
       </div>

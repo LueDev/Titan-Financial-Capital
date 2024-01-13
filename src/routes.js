@@ -9,6 +9,7 @@ const routes = [
     {
         path: '/',
         element: <App />,
+        errorElement: <Home/>,
         children: [
             {
                 path: '/', //Only one route is allowed to match the parent. We're using it for the Home component

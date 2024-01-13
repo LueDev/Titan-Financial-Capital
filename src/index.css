@@ -1,7 +1,49 @@
 * {
   margin: 0;
   /* overflow:hidden; */
-  
+  /* padding:4px; */
+  font-family: Baskerville, "Baskerville Old Face", "Goudy Old Style", Garamond, "Times New Roman", serif;
+
+}
+
+#root{
+  /* background-image: linear-gradient(to top, #9c6f42, #7b4f39, #54332e, #2d1d1e, #000000); */
+  background-image: linear-gradient(to bottom, #ba6f00, #ad6803, #a06005, #935907, #875209, #7c4d0b, #72470d, #68420e, #5d3d11, #533813, #493315, #3f2e16);  height:100vh;
+  color:silver;
+}
+
+.app .NavBar{
+  margin:7px;  
+  /* background: rgb(227,160,40); */
+  /* background: radial-gradient(circle, rgb(235, 160, 20) 0%, rgb(221, 181, 88) 100%);
+  overflow: auto; */
+}
+.Home{
+padding:7px;
+}
+.Home h1{ 
+  margin: 18px 32px;
+  color: #fff;
+  font-size: 40px;
+  letter-spacing: 4px;
+}
+
+.Banking-page{
+  margin: 18px 20px;
+}
+
+.Banking-page h1{
+  padding-bottom:12px;
+  color: #fff;
+  /* text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #0fa,
+      0 0 82px #0fa,
+      0 0 92px #0fa,
+      0 0 102px #0fa,
+      0 0 151px #0fa; */
 }
 
 .financialChart {
@@ -37,8 +79,19 @@
   text-decoration: none;
 }
 
-.nav-link:active {
-  color: rgb(140, 108, 34);
+.NavBar{
+  background-color: #100e0c;
+  color:white;
+  border-radius: 18px;
+  box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.2);
+  /* background: rgb(214,157,23);
+background: radial-gradient(circle, rgba(214,157,23,1) 0%, rgba(46,36,14,0.9402135854341737) 100%); */
+}
+
+.nav-link.active {
+  font-size: 20px;
+  color: rgb(190, 138, 18); /* Set text color to transparent */
+
 }
 
 .Login_logo img {
@@ -252,7 +305,7 @@
 
 .bank-account-card {
   /* border: 2px solid red; */
-  width: 400px;
+  width: 450px;
   height: 90%vh;
   margin: 15px;
   padding: 25px;
@@ -268,13 +321,14 @@
   background-size: 400% 400%;
   animation: moveGradient 7s ease infinite;
   color: white;
-  box-shadow: 20px 15px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 14px 20px 20px rgba(0, 0, 0, 0.3);
   border-radius: 15px;
+  letter-spacing: 1px;
 }
 
 .bank-account-card-expanded {
   /* border: 2px solid red; */
-  width: 90%;
+  width: 86%;
   height: 70vh;
   margin: 15px;
   padding: 25px;
@@ -290,13 +344,15 @@
   background-size: 400% 400%;
   animation: moveGradient 7s ease infinite;
   color: white;
-  box-shadow: 20px 15px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 14px 20px 20px rgba(0, 0, 0, 0.3);
   border-radius: 15px;
+  letter-spacing: 1px;
 }
 
 .bank-account-card_card-header {
   font-size: 25px;
 }
+
 
 .bank-account-card_card-content {
   /* border: 2px solid blue; */
@@ -389,7 +445,7 @@
   /* border: 2px solid blue; */
 }
 .transaction-list li {
-  margin: 13px 0px;
+  margin: 4px 0px;
   max-height: 300px;
   overflow: scroll;
   /* border: 2px solid blue; */
@@ -445,15 +501,19 @@
 
 @media only screen and (max-width: 1081px) {
   .Login_h1 h1 {
-  font-size: 88px;}
+  font-size: 9vw;}
 }
 
-@media only screen and (max-width: 880px) {
+.bank-account-card-expanded{
+  width: 100% -49px
+}
+
+/* @media only screen and (max-width: 880px) {
   .Login_h1 h1 {
     font-size: 9vw ;
   }
   
-} 
+}  */
 /* 
 @media only screen and (max-width: 681px) {
   .Login_h1 h1 {
