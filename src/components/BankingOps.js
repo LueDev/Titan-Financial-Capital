@@ -1,21 +1,20 @@
-// import React, { useState, useEffect } from "react";
-// import { useOutletContext } from "react-router-dom";
+import { useState } from "react";
 import Withdrawal from "../components/Withdrawal";
-import Deposit from "../components/Deposit"
+import Deposit from "../components/Deposit";
+import ImageCarousel from "../components/ImageCarousel";
+import "../index.css";
 
-function BankingOps({account, setAccount}) {
+function BankingOps({ account, setAccount }) {
+  const [bankingSelection, setBankingSelection] = useState("Withdraw");
 
-//   const bankAccount = useOutletContext()
-
-  function handleAccountChange (updatedTransactions, updatedBalance) {
-
+  function handleAccountChange(updatedTransactions, updatedBalance) {
     setAccount((prevAccount) => ({
       ...prevAccount,
       transactions: updatedTransactions,
       balance: updatedBalance,
     }));
 
-    return account
+    return account;
   }
 
   if (!account) {
@@ -24,15 +23,39 @@ function BankingOps({account, setAccount}) {
 
   return (
     <div className="BankingOps-page">
-      <div className="withdrawal">
-        <div className="withdraw-pics"></div>
-        <h1>Withdraw</h1>
-        <Withdrawal account={account} setAccount={setAccount} handleAccountChange={handleAccountChange}/>
+      <div className="banking-carousel">
+        <ImageCarousel />
       </div>
-      <div class="deposit">
-        <div className="deposit-pics"></div>
-        <h1>Deposit</h1>
-        <Deposit account={account} setAccount={setAccount} handleAccountChange={handleAccountChange}/>
+      <div class="banking">
+        <div class="banking-selection">
+          <div class="banking-selection-buttons">
+            <button onClick={(e) => setBankingSelection("Withdraw")}>
+              Withdraw
+            </button>
+            <button onClick={(e) => setBankingSelection("Deposit")}>
+              Deposit
+            </button>
+          </div>
+          {bankingSelection === "Withdraw" ? (
+            <div className="withdrawal">
+              <h1>Withdraw</h1>
+              <Withdrawal
+                account={account}
+                setAccount={setAccount}
+                handleAccountChange={handleAccountChange}
+              />
+            </div>
+          ) : (
+            <div class="deposit">
+              <h1>Deposit</h1>
+              <Deposit
+                account={account}
+                setAccount={setAccount}
+                handleAccountChange={handleAccountChange}
+              />
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

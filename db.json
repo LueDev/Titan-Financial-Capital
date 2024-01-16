@@ -10,7 +10,7 @@
     "id": 1,
     "owner": "Luis",
     "account_Type": "Checking",
-    "balance": 3048,
+    "balance": 3302,
     "transactions": [
       {
         "id": 1,
@@ -431,27 +431,6 @@
         "timestamp": "2024-01-13T22:02:45.875Z",
         "amount": 44,
         "updated_balance": 3302
-      },
-      {
-        "id": 61,
-        "name": "Withdrawal",
-        "timestamp": "2024-01-13T22:11:10.260Z",
-        "amount": 44,
-        "updated_balance": 3258
-      },
-      {
-        "id": 62,
-        "name": "Withdrawal",
-        "timestamp": "2024-01-13T22:12:10.774Z",
-        "amount": -10,
-        "updated_balance": 3248
-      },
-      {
-        "id": 63,
-        "name": "Withdrawal",
-        "timestamp": "2024-01-13T22:12:35.707Z",
-        "amount": -200,
-        "updated_balance": 3048
       }
     ]
   }

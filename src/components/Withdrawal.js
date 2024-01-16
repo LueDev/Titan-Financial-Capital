@@ -84,10 +84,10 @@ function Withdrawal({ account, setAccount, handleAccountChange }) {
   };
   return (
     <div className="Withdraw">
-      <div class="Withdraw-Header">
+      <div className="Banking-Header">
         <h1>How much would you like to withdraw?</h1>
       </div>
-      <div class="Withdraw-form">
+      <div className="Banking-form">
         <form>
           <input
             id="amount"
