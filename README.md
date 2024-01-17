@@ -1,32 +1,59 @@
-### `npm start`
+# Titan Financial Capital
+## Project Overview
+Titan Financial Capital is a financial management application that allows users to track transactions, monitor balances, and gain insights into their financial activities.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Table of Contents
+- Features
+- Getting Started
+- Prerequisites
+- Installation
+- Usage
+- Contributing
+- License
+- Acknowledgments
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
+- Track transactions and categorize them
+- View detailed financial charts and graphs
+- Monitor account balances over time
+- Analyze monthly and yearly financial trends
 
-### `npm test`
+## Getting Started
+Prerequisites
+Node.js: Download and Install Node.js
+Installation
+Clone the repository:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+git clone https://github.com/your-username/titan-financial-capital.git
+``` 
 
-### `npm run build`
+### Navigate to the project directory:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+cd titan-financial-capital
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Install dependencies:
+```bash
+npm install
+```
+### Usage
+Start the application:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm start
+```
 
-### `npm run eject`
+Open your web browser and go to http://localhost:3000.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Explore the financial management features and charts.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Contributing
+Contributions are closed at this time!
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+License
+This project is licensed under the MIT License - see the LICENSE.md file for details.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Acknowledgments
+Thanks to the React and Chart.js communities for their great tools.
