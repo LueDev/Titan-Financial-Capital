@@ -38,11 +38,11 @@ function Withdrawal({ account, setAccount, handleAccountChange }) {
   const updatedTransactions = [...account.transactions, newTransaction]
 
   useEffect(() => {
-    console.log("- - - - - DEPOSIT AMOUNT CHANGED - - - - ")
-    console.log("Deposit -- Account balance from Event Change: ", updatedBalance)
-    console.log("Transactions: ", updatedTransactions)
-    console.log("Deposit Event Change: ", withdrawal)
-    console.log("bank: ", bank)
+    // console.log("- - - - - DEPOSIT AMOUNT CHANGED - - - - ")
+    // console.log("Deposit -- Account balance from Event Change: ", updatedBalance)
+    // console.log("Transactions: ", updatedTransactions)
+    // console.log("Deposit Event Change: ", withdrawal)
+    // console.log("bank: ", bank)
 
   // Since the balance is delayd. This will solidify the correct balance towards the bank state
   setBank((prevObj) => ({
@@ -56,7 +56,7 @@ function Withdrawal({ account, setAccount, handleAccountChange }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("- - - - - SUBMITTED - - - - -")
+    // console.log("- - - - - SUBMITTED - - - - -")
 
     if (withdrawal.amount > 0) {
       setTimeout(() => {
@@ -85,7 +85,7 @@ function Withdrawal({ account, setAccount, handleAccountChange }) {
   return (
     <div className="Withdraw">
       <div className="Banking-Header">
-        <h1>How much would you like to withdraw?</h1>
+        <h1>How much would you like to Withdraw?</h1>
       </div>
       <div className="Banking-form">
         <form>
