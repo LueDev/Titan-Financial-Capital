@@ -49,11 +49,11 @@ Open your web browser and go to http://localhost:3000.
 
 Explore the financial management features and charts.
 
-Contributing
+## Contributing
 Contributions are closed at this time!
 
-License
+## License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
 
-Acknowledgments
+## Acknowledgments
 Thanks to the React and Chart.js communities for their great tools.
