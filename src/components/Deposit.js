@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
+import SuccessMessage from "./SuccessMessage";
 
 function Deposit({ account, handleAccountChange }) {
 
   const [deposit, setDeposit] = useState({
     name: "Deposit",
     timestamp: "",
-    amount: 0,
+    amount: "",
     updated_balance: account.balance,
   });
 
@@ -35,6 +36,10 @@ function Deposit({ account, handleAccountChange }) {
     updated_balance: updatedBalance,
   };
   const updatedTransactions = [...account.transactions, newTransaction]
+
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+
+
 
   useEffect(() => {
     // console.log("- - - - - DEPOSIT AMOUNT CHANGED - - - - ")
@@ -76,8 +81,14 @@ function Deposit({ account, handleAccountChange }) {
   
         setDeposit((prevObj) => ({
           ...prevObj,
-          amount: 0,
+          amount: "",
         }));
+
+        setShowSuccessMessage(true)
+
+        setTimeout(() => {
+          setShowSuccessMessage(false)
+        }, 2400)
       },500)
     }
   };
@@ -87,6 +98,14 @@ function Deposit({ account, handleAccountChange }) {
       <div className="Banking-Header">
         <h1>How much would you like to Deposit?</h1>
       </div>
+      {showSuccessMessage === true 
+        ? (
+           <div class="SuccessMessage">
+        <SuccessMessage action="deposit" />
+      </div>
+        )
+        : ""
+      }
       <div className="Banking-form">
         <form onSubmit={handleSubmit}>
           <input

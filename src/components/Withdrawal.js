@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
+import SuccessMessage from "./SuccessMessage";
 
 function Withdrawal({ account, setAccount, handleAccountChange }) {
- 
   const [withdrawal, setWithdrawal] = useState({
     name: "Withdrawal",
     timestamp: "",
-    amount: 0,
+    amount: "",
     updated_balance: account.balance,
   });
 
@@ -16,18 +16,18 @@ function Withdrawal({ account, setAccount, handleAccountChange }) {
       ...prevObj,
       [name]: value,
       timestamp: new Date().toISOString(),
-      updated_balance: updatedBalance
+      updated_balance: updatedBalance,
     }));
 
     setBank((prevObj) => ({
       ...prevObj,
       balance: updatedBalance,
-      transactions: [...account.transactions, newTransaction ]
+      transactions: [...account.transactions, newTransaction],
     }));
   }
 
-  const [bank, setBank] = useState(account)
-  const updatedBalance = account.balance - parseFloat(withdrawal.amount)
+  const [bank, setBank] = useState(account);
+  const updatedBalance = account.balance - parseFloat(withdrawal.amount);
   const newTransaction = {
     id: account.transactions.length + 1,
     name: withdrawal.name,
@@ -35,7 +35,8 @@ function Withdrawal({ account, setAccount, handleAccountChange }) {
     amount: -parseFloat(withdrawal.amount),
     updated_balance: updatedBalance,
   };
-  const updatedTransactions = [...account.transactions, newTransaction]
+  const updatedTransactions = [...account.transactions, newTransaction];
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
   useEffect(() => {
     // console.log("- - - - - DEPOSIT AMOUNT CHANGED - - - - ")
@@ -44,15 +45,13 @@ function Withdrawal({ account, setAccount, handleAccountChange }) {
     // console.log("Deposit Event Change: ", withdrawal)
     // console.log("bank: ", bank)
 
-  // Since the balance is delayd. This will solidify the correct balance towards the bank state
-  setBank((prevObj) => ({
-    ...prevObj,
-    balance: updatedBalance,
-    transactions: updatedTransactions
-  }));
-
-  }, [withdrawal]); 
-
+    // Since the balance is delayd. This will solidify the correct balance towards the bank state
+    setBank((prevObj) => ({
+      ...prevObj,
+      balance: updatedBalance,
+      transactions: updatedTransactions,
+    }));
+  }, [withdrawal]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -60,26 +59,33 @@ function Withdrawal({ account, setAccount, handleAccountChange }) {
 
     if (withdrawal.amount > 0) {
       setTimeout(() => {
-        handleAccountChange(updatedTransactions, updatedBalance)
-  
-          const configObj = {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(bank),
-          };
+        handleAccountChange(updatedTransactions, updatedBalance);
+
+        const configObj = {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(bank),
+        };
         const post = async () => {
-          fetch('http://localhost:4000/bank_account', configObj)
-          .then(res => res.json())
-          .then(data => console.log(data))}
-          post()
-  
+          fetch("http://localhost:4000/bank_account", configObj)
+            .then((res) => res.json())
+            .then((data) => console.log(data));
+        };
+        post();
+
         setWithdrawal((prevObj) => ({
           ...prevObj,
-          amount: 0,
+          amount: "",
         }));
-      },500)
+
+        setShowSuccessMessage(true)
+
+        setTimeout(() => {
+          setShowSuccessMessage(false)
+        }, 2400)
+      }, 500);
     }
   };
   return (
@@ -87,6 +93,14 @@ function Withdrawal({ account, setAccount, handleAccountChange }) {
       <div className="Banking-Header">
         <h1>How much would you like to Withdraw?</h1>
       </div>
+      {showSuccessMessage === true 
+        ? (
+           <div class="SuccessMessage">
+        <SuccessMessage action="withdrawal" />
+      </div>
+        )
+        : ""
+      }
       <div className="Banking-form">
         <form>
           <input

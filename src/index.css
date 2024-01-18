@@ -39,31 +39,36 @@ padding:7px;
 
 .carousel img{
   width: 100%;
-  margin-left: auto;
-  margin-right:auto;
-  object-fit: fill;
+  object-fit: cover;
+  height:140px;
+}
+.banking-carousel h2{
+text-align:center;
 }
 
-.carousel{
-  width:40vw;
-  height:60vh;
+.banking-carousel{
+  width: 100%;
+  height:22vh;
+  margin-bottom:2px;
 }
 
 .BankingOps-page{
   display:flex;
+  flex-direction: column;
   justify-content: space-evenly;
 }
 
 .banking{
   border: white solid 3px;
-  border-radius:40px;
-  padding:5%;
+  border-radius:35px;
+  padding:23px;
+  transition: all 0.7s
 }
 
 .banking-selection-buttons{
   display:flex;
   justify-content: space-evenly;
-  margin-bottom:9%;
+  margin-bottom:4%;
 
 }
 
@@ -98,11 +103,11 @@ padding:7px;
   border-radius:23px;
   background-color: rgb(220, 167, 51);
   color:white;
-  padding: 15px 50px;
+  padding: 15px 120px;
   text-transform: uppercase;
   border: 2px solid white;
   font-weight: 600;
-  font-size: 1.15rem;
+  font-size: 1.14rem;
   border-radius: 50px;
   cursor: pointer;
   transition: all .4s;
@@ -263,9 +268,14 @@ background: radial-gradient(circle, rgba(214,157,23,1) 0%, rgba(46,36,14,0.94021
   border-color: #9c6f42;
 }
 
+.Login__form input {
+  text-align: center;
+}
+
 .Login__form input::placeholder {
   color: #999;
   font-style: italic;
+  text-align: center;
 }
 
 @keyframes pulse {
@@ -425,7 +435,7 @@ background: radial-gradient(circle, rgba(214,157,23,1) 0%, rgba(46,36,14,0.94021
 
 .bank-account-card_card-content {
   /* border: 2px solid blue; */
-  max-width: 220px;
+  max-width: 25px;
   display: flex;
   justify-content: space-between;
   margin-right: 30px;
@@ -433,7 +443,7 @@ background: radial-gradient(circle, rgba(214,157,23,1) 0%, rgba(46,36,14,0.94021
 
 .bank-account-card_card-content {
   /* border: 2px solid blue; */
-  max-width: 220px;
+  max-width: 550px;
   display: flex;
   justify-content: space-between;
   margin-right: 30px;
@@ -498,8 +508,18 @@ background: radial-gradient(circle, rgba(214,157,23,1) 0%, rgba(46,36,14,0.94021
   overflow: auto;
   color: black;
   flex: 0.6;
+  margin:0
   /* margin-top: 2.5px; */
 }
+
+.transaction-charts span{
+  overflow: auto;
+  color: black;
+  flex: 0.6;
+  margin:0
+  /* margin-top: 2.5px; */
+}
+
 .transaction-list {
   margin: 13px 0px;
   height: 50vh;
@@ -536,19 +556,16 @@ background: radial-gradient(circle, rgba(214,157,23,1) 0%, rgba(46,36,14,0.94021
   background-color: rgb(192, 192, 192);
 }
 
-@media only screen and (max-width: 1230px) {
-
-  .banking-selection-buttons button{
-    font-size:13px;
-  }
-
+@media only screen and (max-width: 1310px) {
 .BankingOps-page{
   display:flex;
   flex-direction: column;
 }
 
 .banking-carousel{
-  margin-bottom: 8px;
+  width:100%;
+  margin-bottom:20px;
+  max-height:250px;
 }
 
 .carousel img{
@@ -558,11 +575,8 @@ background: radial-gradient(circle, rgba(214,157,23,1) 0%, rgba(46,36,14,0.94021
   object-fit:cover;
 }
 
-.carousel{
-  width:70vw;
-  height:26%;
-  margin-bottom:40px;
 }
+@media only screen and (max-width: 1230px) {
 
   .transaction-ul {
     flex-direction: column;
@@ -599,4 +613,57 @@ background: radial-gradient(circle, rgba(214,157,23,1) 0%, rgba(46,36,14,0.94021
   .Login_h1 h1 {
   font-size: 9vw;}
 
+}
+@media only screen and (min-width: 941px) {
+  .banking{
+    max-width: 74vw;
+  }
+  
+}
+
+@media only screen and (max-width: 940px) {
+  .banking{
+    max-width: 64vw;
+    border: white solid 3px;
+    border-radius:40px;
+    padding:20px;
+  }
+  
+  
+  .banking input{
+    font-size: 23px;
+  }
+  
+  
+  .banking button{
+    padding:23px;
+    font-size: 1em;
+  }
+  
+  .banking h1{
+    font-size: 1.4em;
+  }
+  }
+
+@media only screen and (max-width: 150px) {
+.banking{
+  max-width: 64vw;
+  border: white solid 3px;
+  border-radius:40px;
+  padding:2%;
+}
+
+
+.banking input{
+  font-size: 1rem;
+}
+
+
+.banking button{
+  padding: 15px 2%
+}
+
+.banking h1{
+  font-size: 1em;
+}
 }
