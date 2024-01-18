@@ -1,20 +1,18 @@
 * {
   margin: 0;
-  /* overflow:hidden; */
-  /* padding:4px; */
   font-family: Baskerville, "Baskerville Old Face", "Goudy Old Style", Garamond, "Times New Roman", serif;
   overflow:auto;
 }
 
 #root{
-  /* background-image: linear-gradient(to top, #9c6f42, #7b4f39, #54332e, #2d1d1e, #000000); */
   background-image: linear-gradient(to bottom, #ba6f00, #ad6803, #a06005, #935907, #875209, #7c4d0b, #72470d, #68420e, #5d3d11, #533813, #493315, #3f2e16);  height:100vh;
   color:silver;
 }
 
 .NavBar{
   margin-left:12px;
-  margin-right:12px;  
+  margin-right:12px; 
+  margin-bottom: 20px;
 }
 
 .Home{
@@ -157,7 +155,8 @@ text-align:center;
   background-color: #100e0c;
   color:white;
   border-radius: 18px;
-  box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 4px 20px 0px rgba(0, 0, 0, 0.8)
+
   /* background: rgb(214,157,23);
 background: radial-gradient(circle, rgba(214,157,23,1) 0%, rgba(46,36,14,0.9402135854341737) 100%); */
 }
@@ -554,6 +553,11 @@ background: radial-gradient(circle, rgba(214,157,23,1) 0%, rgba(46,36,14,0.94021
 .transaction-card:hover {
   width: 86%;
   background-color: rgb(192, 192, 192);
+}
+
+.Banking-page-header{
+  font-size: 20px;
+  letter-spacing: 3px;
 }
 
 @media only screen and (max-width: 1310px) {

@@ -11,7 +11,9 @@ function Banking() {
 
   return (
     <div className="Banking-page">
-      <h1>Banking</h1>
+      <div class="Banking-page-header">
+        <h1>Banking</h1>
+      </div>
       <h1>Balance: {bankAccount.bankAccount.balance}</h1>
       <BankingOps
         account={bankAccount.bankAccount}
