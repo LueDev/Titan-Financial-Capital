@@ -560,6 +560,17 @@ background: radial-gradient(circle, rgba(214,157,23,1) 0%, rgba(46,36,14,0.94021
   letter-spacing: 3px;
 }
 
+.transaction-specific{
+  background-color: white;
+  width: 80vw;
+  border: 2px solid silver;
+  border-radius: 24px;
+  margin-left: 4vw;
+  margin-top:2vh;
+  padding: 4px 13px;
+  color:black
+}
+
 @media only screen and (max-width: 1310px) {
 .BankingOps-page{
   display:flex;
@@ -627,27 +638,61 @@ background: radial-gradient(circle, rgba(214,157,23,1) 0%, rgba(46,36,14,0.94021
 
 @media only screen and (max-width: 940px) {
   .banking{
-    max-width: 64vw;
+    /* max-width: 80vw; */
     border: white solid 3px;
     border-radius:40px;
     padding:20px;
   }
   
-  
+  .banking h1{
+    font-size: 2em;    
+  }
+
   .banking input{
-    font-size: 23px;
+    font-size: 3vw;
   }
   
   
   .banking button{
-    padding:23px;
+    padding:3%;
     font-size: 1em;
   }
   
-  .banking h1{
-    font-size: 1.4em;
   }
+
+@media only screen and (max-width: 640px) {
+  .banking h1 {
+    font-size: 6vw;
   }
+
+  .banking button{
+    padding:3%;
+    font-size: 4vw;
+  }
+
+  .NavBar{
+    font-size: 3vw;
+  }
+
+  .nav-link{
+    margin-left:0;
+    min-width:75px;
+  }
+
+  .nav-link.active{
+    margin-left:0;
+    font-size:3vw;
+  }
+
+  .bank-account-card{
+    width: 69vw;
+    min-width: 275px;
+  }
+
+  .bank-account-card-expanded{
+    width: 80vw;
+  }
+}
 
 @media only screen and (max-width: 150px) {
 .banking{

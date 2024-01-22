@@ -48,16 +48,15 @@ const BankAccountCard = ({ bankAccount }) => {
           </div>
           <div className="transaction-list">
             <ul className="transaction-ul">
-              <div class="transaction-ul-list">
+              <div className="transaction-ul-list">
                 {sortTransactions.map((transaction) => (
 
                   <TransactionCard key={transaction.id} transaction={transaction} />
                 ))}
               </div>
-              <div class="transaction-charts">
+              <div className="transaction-charts">
                 <BankAccountDetails transactions={bankAccount.transactions} />
               </div>
-              {/* <BankAccountDetails transactions={bankAccount.transactions} /> */}
             </ul>
           </div>
         </div>
