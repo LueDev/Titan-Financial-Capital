@@ -17,10 +17,10 @@ const routes = [
                 path: '/', //Only one route is allowed to match the parent. We're using it for the Home component
                 element: <Home />,
                 // children:[
-                // {
-                //     path: '/transaction/:id',
-                //     element: <Transaction />
-                // }
+                    // {  
+                    //     path: '/transaction/:id/:name/:timestamp/:amount/:updated_balance',
+                    //     element: <Transaction />
+                    // }
                 // ]
             }, 
             {   path: '/transaction/:id/:name/:timestamp/:amount/:updated_balance',

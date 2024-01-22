@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../index.css";
 import TransactionCard from "./TransactionCard";
 import BankAccountDetails from "./BankAccountDetails";
+import SwapVertIcon from '@mui/icons-material/SwapVert';
 
 const BankAccountCard = ({ bankAccount }) => {
   const [expanded, setExpanded] = useState(false);
@@ -42,9 +43,10 @@ const BankAccountCard = ({ bankAccount }) => {
               onClick={() =>
                 setSortTransactions((prev) => [...sortTransactions.reverse()])
               }
-            >
-              Transactions
-            </h4>
+            > Transactions </h4>
+            <SwapVertIcon   onClick={() =>
+                setSortTransactions((prev) => [...sortTransactions.reverse()])
+              }/>
           </div>
           <div className="transaction-list">
             <ul className="transaction-ul">

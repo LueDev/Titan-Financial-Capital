@@ -467,12 +467,14 @@ background: radial-gradient(circle, rgba(214,157,23,1) 0%, rgba(46,36,14,0.94021
   animation: moveGradient 5s ease infinite;
   color: transparent; /* Set text color to transparent */
   background-clip: text; /* Apply the background gradient to the text content */
+  cursor:pointer;
 }
 
 .bank-account-card_balance-number_negative {
   font-size: 72px;
   font-weight: 1500;
   color: red;
+  cursor:pointer;
 }
 
 .transaction-ul {
@@ -531,6 +533,8 @@ background: radial-gradient(circle, rgba(214,157,23,1) 0%, rgba(46,36,14,0.94021
   max-height: 300px;
   overflow: scroll;
   /* border: 2px solid blue; */
+  display:flex;
+  cursor:pointer;
 }
 .transaction-list li {
   margin: 4px 0px;
@@ -645,7 +649,7 @@ background: radial-gradient(circle, rgba(214,157,23,1) 0%, rgba(46,36,14,0.94021
   }
   
   .banking h1{
-    font-size: 2em;    
+    font-size: 2rem;    
   }
 
   .banking input{

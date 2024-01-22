@@ -5,7 +5,7 @@ import { Outlet, Navigate, useNavigate } from "react-router-dom";
 import NavBar from "./components/NavBar";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
   const [bankAccount, setBankAccount] = useState({
     id: "",
