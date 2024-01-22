@@ -2,6 +2,8 @@
 ## Project Overview
 Titan Financial Capital is a financial management application that allows users to track transactions, monitor balances, and gain insights into their financial activities.
 
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExamhxMDljcHFlbm1yYnA2bnNxNjZqcnRmZzdkN3hsdTh0cnljenZ6ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YfiH9ZJ72IRjjGviZC/giphy.gif)
+
 ## Table of Contents
 - Features
 - Getting Started
