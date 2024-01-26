@@ -15,9 +15,6 @@ const bankAccount = useOutletContext()
   return (
     <div className="Home">
       {/* <h1>Welcome, {bankAccount.bankAccount.owner}</h1> */}
-
-
-
       <h1>Accounts</h1>
         <BankAccountCard bankAccount={bankAccount.bankAccount} />
     </div>

@@ -22,7 +22,7 @@ function Login() {
   // Create a function that calls the login function when the form is submitted
   function handleLogin(e) {
     e.preventDefault();
-    fetch(`http://localhost:4000/Authentication`)
+    fetch(`http://localhost:4000/authentication`)
       .then((res) => res.json())
       .then((data) => {
         let AccountFound = data.filter(
@@ -34,7 +34,7 @@ function Login() {
         try {
           AccountFound[0]["id"] !== null
             ? login.login()
-            : console.log("Invalid credentials");
+            : console.warn("Invalid credentials");
         } catch (error) {
           console.warn("Invalid credentials");
           setShowValidation(true);

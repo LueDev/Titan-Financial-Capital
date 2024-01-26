@@ -1,7 +1,7 @@
 {
   "authentication": [
     {
-      "id": 1,
+      "id": "1",
       "username": "Luis",
       "password": "js"
     }
@@ -10,7 +10,7 @@
     "id": 1,
     "owner": "Luis",
     "account_Type": "Checking",
-    "balance": 4642,
+    "balance": 3542,
     "transactions": [
       {
         "id": 1,
@@ -462,10 +462,38 @@
       },
       {
         "id": 65,
+        "name": "Withdrawal",
+        "timestamp": "2024-01-22T17:04:13.418Z",
+        "amount": -100,
+        "updated_balance": 3042
+      },
+      {
+        "id": 66,
+        "name": "Withdrawal",
+        "timestamp": "2024-01-22T17:04:20.271Z",
+        "amount": -50,
+        "updated_balance": 2992
+      },
+      {
+        "id": 67,
         "name": "Deposit",
-        "timestamp": "2024-01-18T18:21:09.448Z",
-        "amount": 1500,
-        "updated_balance": 4642
+        "timestamp": "2024-01-22T17:04:30.517Z",
+        "amount": 150,
+        "updated_balance": 3142
+      },
+      {
+        "id": 68,
+        "name": "Deposit",
+        "timestamp": "2024-01-22T17:50:20.431Z",
+        "amount": 500,
+        "updated_balance": 3642
+      },
+      {
+        "id": 69,
+        "name": "Withdrawal",
+        "timestamp": "2024-01-22T17:55:08.245Z",
+        "amount": -100,
+        "updated_balance": 3542
       }
     ]
   }

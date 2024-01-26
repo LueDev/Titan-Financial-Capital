@@ -3,9 +3,10 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import { Outlet, Navigate, useNavigate } from "react-router-dom";
 import NavBar from "./components/NavBar";
+import ClickMe from "./components/ClickMe";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   const navigate = useNavigate();
   const [bankAccount, setBankAccount] = useState({
     id: "",

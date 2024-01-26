@@ -11,7 +11,7 @@ function Banking() {
 
   return (
     <div className="Banking-page">
-      <div class="Banking-page-header">
+      <div className="Banking-page-header">
         <h1>Banking</h1>
       </div>
       <h1>Balance: {bankAccount.bankAccount.balance}</h1>

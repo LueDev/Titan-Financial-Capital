@@ -36,7 +36,8 @@ function BankingOps({ account, setAccount }) {
               Deposit
             </button>
           </div>
-          {bankingSelection === "Withdraw" ? (
+          { bankingSelection === "Withdraw" 
+          ? (
             <div className="withdrawal">
               <h1>Withdraw</h1>
               <Withdrawal

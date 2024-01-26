@@ -89,19 +89,24 @@ const DailyTransactionChart = ({ transactions }) => {
 
   const aggregateData = (data) => {
     // Sort transactions by timestamp before processing
-    // This solved a bug where the correct sum of transactions was inaccurate 
+    // This solved a bug where the correct sum of transactions was inaccurate
     // because timestamps for non-consecutive transactions threw off the calc
-    const sortedTransactions = data.slice().sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
-  
+    const sortedTransactions = data
+      .slice()
+      .sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
+
     const aggregatedByDay = sortedTransactions.reduce(
       (result, transaction) => {
         const date = new Date(transaction.timestamp);
-        const formattedDate = format(date, 'MM/dd/yyyy');
-  
+        const formattedDate = format(date, "MM/dd/yyyy");
+
         // Check if the transaction is in the selected month
-        if (date.getMonth() === selectedDate.getMonth() && date.getFullYear() === selectedDate.getFullYear()) {
+        if (
+          date.getMonth() === selectedDate.getMonth() &&
+          date.getFullYear() === selectedDate.getFullYear()
+        ) {
           const existingDateIndex = result.labels.indexOf(formattedDate);
-  
+
           if (existingDateIndex !== -1) {
             // If date exists, update existing values
             result.data[existingDateIndex] += transaction.amount;
@@ -110,19 +115,21 @@ const DailyTransactionChart = ({ transactions }) => {
             // If date doesn't exist, add a new entry
             result.labels.push(formattedDate);
             result.data.push(transaction.amount);
-            const previousBalance = result.balanceData.length > 0 ? result.balanceData[result.balanceData.length - 1] : 0;
+            const previousBalance =
+              result.balanceData.length > 0
+                ? result.balanceData[result.balanceData.length - 1]
+                : 0;
             result.balanceData.push(previousBalance + transaction.amount);
           }
         }
-  
+
         return result;
       },
       { labels: [], data: [], balanceData: [] }
     );
-  
+
     return aggregatedByDay;
   };
-  
 
   const handleDateChange = (date) => {
     setSelectedDate(date);

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import SuccessMessage from "./SuccessMessage";
+import WarningMessage from "./WarningMessage";
 
 function Withdrawal({ account, setAccount, handleAccountChange }) {
   const [withdrawal, setWithdrawal] = useState({
@@ -37,6 +38,7 @@ function Withdrawal({ account, setAccount, handleAccountChange }) {
   };
   const updatedTransactions = [...account.transactions, newTransaction];
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [showWarningMessage, setShowWarningMessage] = useState(false);
 
   useEffect(() => {
     // console.log("- - - - - DEPOSIT AMOUNT CHANGED - - - - ")
@@ -57,12 +59,12 @@ function Withdrawal({ account, setAccount, handleAccountChange }) {
     e.preventDefault();
     // console.log("- - - - - SUBMITTED - - - - -")
 
-    if (withdrawal.amount > 0) {
+    if (withdrawal.amount <= account.balance) {
       setTimeout(() => {
         handleAccountChange(updatedTransactions, updatedBalance);
 
         const configObj = {
-          method: "POST",
+          method: "PUT",
           headers: {
             "Content-Type": "application/json",
           },
@@ -80,12 +82,24 @@ function Withdrawal({ account, setAccount, handleAccountChange }) {
           amount: "",
         }));
 
-        setShowSuccessMessage(true)
+        setShowSuccessMessage(true);
 
         setTimeout(() => {
-          setShowSuccessMessage(false)
-        }, 2400)
+          setShowSuccessMessage(false);
+        }, 2400);
       }, 500);
+    } else {
+      setShowWarningMessage(true);
+
+      setTimeout(() => {
+        setShowWarningMessage(false);
+      }, 2400);
+
+      setWithdrawal((prevObj) => ({
+        ...prevObj,
+        amount: "",
+      }));
+
     }
   };
   return (
@@ -93,14 +107,20 @@ function Withdrawal({ account, setAccount, handleAccountChange }) {
       <div className="Banking-Header">
         <h1>How much would you like to Withdraw?</h1>
       </div>
-      {showSuccessMessage === true 
-        ? (
-           <div class="SuccessMessage">
-        <SuccessMessage action="withdrawal" />
-      </div>
-        )
-        : ""
-      }
+      {showSuccessMessage === true ? (
+        <div class="SuccessMessage">
+          <SuccessMessage action="withdrawal" />
+        </div>
+      ) : (
+        ""
+      )}
+      {showWarningMessage === true ? (
+        <div class="SuccessMessage">
+          <WarningMessage action="withdrawal" />
+        </div>
+      ) : (
+        ""
+      )}
       <div className="Banking-form">
         <form>
           <input
